@@ -1,0 +1,382 @@
+/* =============================== */
+/*      ABOUT PAGE STYLES          */
+/* =============================== */
+
+.about-page {
+    background: transparent;
+    color: var(--text-main);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---- SECTION HEADER ---- */
+.section-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 850;
+    color: var(--text-main);
+    margin-bottom: 28px;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+/* =============================== */
+/*           HERO SECTION          */
+/* =============================== */
+.about-hero {
+    position: relative;
+    padding: 120px 24px 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.about-hero-title {
+    font-size: clamp(48px, 9vw, 82px);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+    color: var(--text-main);
+}
+
+.about-hero-subtitle {
+    font-size: clamp(17px, 2.5vw, 19px);
+    color: var(--text-dim);
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* =============================== */
+/*           OUR STORY             */
+/* =============================== */
+.about-story {
+    padding: 100px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.story-image-wrapper {
+    position: relative;
+}
+
+.story-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.story-image-glow {
+    display: none;
+}
+
+.story-text h2 {
+    font-size: 36px;
+    font-weight: 850;
+    margin-bottom: 25px;
+    letter-spacing: -1.2px;
+}
+
+.story-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+}
+
+/* =============================== */
+/*           PILLARS               */
+/* =============================== */
+.about-pillars {
+    padding: 100px 0;
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.pillars-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pillar-card {
+    padding: 50px 35px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pillar-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    background: rgba(30, 41, 59, 1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.pillar-icon {
+    font-size: 36px;
+    margin-bottom: 25px;
+    background: var(--glass-border);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.4s;
+}
+
+.pillar-card:hover .pillar-icon {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.pillar-card h4 {
+    font-size: 22px;
+    font-weight: 850;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.pillar-card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+/* =============================== */
+/*          CAPABILITIES           */
+/* =============================== */
+.about-capabilities {
+    padding: 100px 0;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.capability-item {
+    display: flex;
+    gap: 20px;
+    padding: 35px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.capability-item:hover {
+    border-color: var(--accent);
+    background: rgba(30, 41, 59, 0.9);
+}
+
+.capability-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: 0.4;
+    line-height: 1;
+}
+
+.capability-content h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.capability-content p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+/* =============================== */
+/*             TEAM                */
+/* =============================== */
+.about-team {
+    padding: 100px 0;
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 45px 25px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    transition: all 0.4s;
+}
+
+.team-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    background: rgba(30, 41, 59, 1);
+}
+
+.team-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    border: 4px solid var(--glass-border);
+    object-fit: cover;
+    transition: all 0.4s;
+}
+
+.team-card:hover .team-avatar {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.team-card h4 {
+    font-size: 20px;
+    font-weight: 850;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.team-role {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.team-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+/* =============================== */
+/*            WHY STATS            */
+/* =============================== */
+.about-why {
+    padding: 100px 0 140px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-item {
+    text-align: center;
+    padding: 45px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.why-item:hover {
+    border-color: var(--primary);
+    background: rgba(30, 41, 59, 0.9);
+}
+
+.why-stat {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.why-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .story-grid { grid-template-columns: 1fr; gap: 40px; }
+    .story-image { height: 400px; }
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    .capabilities-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .about-hero-title { font-size: 52px; }
+    .about-hero { padding: 100px 0 60px; }
+}
+
+@media (max-width: 480px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .about-hero-title { font-size: 38px; }
+    .about-container { padding: 0 20px; }
+    .pillar-card, .team-card, .why-item, .capability-item { padding: 30px 20px; }
+}

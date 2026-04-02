@@ -1,0 +1,221 @@
+/* ========================= */
+/*       NAVBAR STYLES       */
+/* ========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: rgba(15, 23, 42, 0.85); /* Deep Slate Navy */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* LOGO */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 850;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: var(--primary);
+}
+
+.tagline {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 13.5px;
+    position: relative;
+    transition: all 0.3s;
+    letter-spacing: 0.3px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    bottom: -6px;
+    left: 0;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/* ACTIVE LINK */
+.active-link {
+    color: var(--text-main) !important;
+}
+
+.active-link::after {
+    width: 100% !important;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700 !important;
+    border: 1px solid transparent !important;
+}
+
+.contact-btn::after {
+    display: none !important;
+}
+
+.contact-btn:hover {
+    background: transparent;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    transform: translateY(-1px);
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1002;
+}
+
+.bar {
+    width: 24px;
+    height: 1.5px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.35s ease;
+}
+
+.hamburger-open .bar:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+    background: var(--primary);
+}
+
+.hamburger-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-open .bar:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+    background: var(--primary);
+}
+
+/* OVERLAY */
+.nav-overlay {
+    display: none;
+}
+
+/* ========================= */
+/*     RESPONSIVE (MOBILE)   */
+/* ========================= */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 90px 24px 40px;
+        background: var(--bg-dark);
+        border-left: 1px solid var(--glass-border);
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1001;
+    }
+
+    .nav-open {
+        right: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 18px 0;
+        font-size: 16px;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .contact-btn {
+        margin-top: 24px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        backdrop-filter: blur(4px);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .tagline {
+        font-size: 8px;
+    }
+}

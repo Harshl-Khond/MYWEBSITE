@@ -1,0 +1,63 @@
+/* =============================== */
+/*        AURORA BACKGROUND STYLES */
+/* =============================== */
+
+.aurora-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bg-deep); /* Base slate navy */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.aurora-blob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    filter: blur(140px); /* Massive blur for softness */
+    opacity: 0.12; /* Very subtle and sober */
+    mix-blend-mode: screen;
+}
+
+.blob-1 {
+    background: var(--primary);
+    top: -150px;
+    left: -150px;
+    animation: move-blob-1 30s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+    background: var(--emerald);
+    bottom: -150px;
+    right: -150px;
+    animation: move-blob-2 35s infinite alternate-reverse ease-in-out;
+}
+
+.blob-3 {
+    background: rgba(59, 130, 246, 0.4);
+    top: 40%;
+    left: 30%;
+    width: 600px;
+    height: 600px;
+    animation: move-blob-3 40s infinite alternate ease-in-out;
+}
+
+@keyframes move-blob-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(150px, 100px) scale(1.15); }
+}
+
+@keyframes move-blob-2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-200px, -150px) scale(1.2); }
+}
+
+@keyframes move-blob-3 {
+    0% { transform: translate(0, 0) scale(1.1); }
+    100% { transform: translate(-100px, 150px) scale(0.9); }
+}

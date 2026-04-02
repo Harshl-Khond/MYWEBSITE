@@ -1,0 +1,80 @@
+:root {
+    /* Millennial Sober Palette - Sophisticated & Professional */
+    --bg-dark: #0f172a;        /* Deep Slate Navy */
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --primary: #3b82f6;       /* Professional Royal Blue */
+    --primary-glow: rgba(59, 130, 246, 0.2);
+    --secondary: #64748b;     /* Refined Slate Gray */
+    --secondary-glow: rgba(100, 116, 139, 0.2);
+    --accent: #10b981;        /* Muted Emerald Teal */
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+@import "tailwindcss";
+
+/* GLOBAL RESETS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--secondary), var(--primary));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* GLASS EFFECT HELPER */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
