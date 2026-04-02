@@ -9,7 +9,7 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-content">
                     <span className="about-badge">WHO WE ARE</span>
-                    <h1 className="about-hero-title">About TechFarm</h1>
+                    <h1 className="about-hero-title">About Flowgenix</h1>
                     <p className="about-hero-subtitle">
                         We are a team of engineers, designers, and strategists building the next generation of intelligent digital products.
                     </p>
@@ -32,7 +32,7 @@ const About = () => {
                             <h2 className="section-label">Our Story</h2>
                             <h3 className="section-heading">From a Vision to a Digital Powerhouse</h3>
                             <p>
-                                TechFarm was founded with a single belief: technology should solve real problems, not create new ones.
+                                Flowgenix was founded with a single belief: technology should solve real problems, not create new ones.
                                 What started as a small team of passionate developers has grown into a full-service digital agency
                                 that partners with startups, enterprises, and organizations worldwide.
                             </p>
@@ -184,7 +184,7 @@ const About = () => {
             <section className="about-why">
                 <div className="about-container">
                     <div className="why-header">
-                        <h2 className="section-label">Why TechFarm</h2>
+                        <h2 className="section-label">Why Flowgenix</h2>
                         <h3 className="section-heading">What Sets Us Apart</h3>
                     </div>
                     <div className="why-grid">

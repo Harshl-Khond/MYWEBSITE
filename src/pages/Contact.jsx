@@ -60,7 +60,7 @@ const Contact = () => {
                                 <div className="info-icon" aria-hidden="true">📍</div>
                                 <div>
                                     <h4>Our Office</h4>
-                                    <p>TechFarm Solutions Pvt. Ltd.</p>
+                                    <p>Flowgenix AI Pvt. Ltd.</p>
                                     <p>Indore, Madhya Pradesh, India</p>
                                 </div>
                             </div>
@@ -69,8 +69,8 @@ const Contact = () => {
                                 <div className="info-icon" aria-hidden="true">📧</div>
                                 <div>
                                     <h4>Email Us</h4>
-                                    <p>hello@techfarm.in</p>
-                                    <p>support@techfarm.in</p>
+                                    <p>hello@flowgenix.ai</p>
+                                    <p>support@flowgenix.ai</p>
                                 </div>
                             </div>
 
@@ -199,7 +199,7 @@ const Contact = () => {
                 <div className="contact-container">
                     <div className="map-wrapper">
                         <iframe
-                            title="TechFarm Office Location"
+                            title="Flowgenix Office Location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.7091436024!2d75.69815!3d22.72383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
                             width="100%"
                             height="400"

@@ -1,0 +1,223 @@
+.hero-section {
+    position: relative;
+    padding: 180px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(22, 64, 183, 0.1);
+    border: 1px solid rgba(22, 64, 183, 0.2);
+    border-radius: 100px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.hero-heading {
+    font-size: clamp(42px, 8vw, 76px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    color: var(--text-main);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtext {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--text-dim);
+    max-width: 680px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.btn-primary-glow {
+    padding: 16px 32px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 40px -10px var(--primary-glow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 50px -5px var(--primary-glow);
+}
+
+.btn-secondary-link {
+    padding: 16px 32px;
+    color: var(--text-main);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-link:hover {
+    color: var(--primary);
+}
+
+/* HERO VISUAL ELEMENT */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.visual-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: var(--primary);
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.visual-card-container {
+    perspective: 1000px;
+}
+
+.visual-card {
+    width: 100%;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: rotateX(10deg);
+}
+
+.card-header {
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.card-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-line {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.long { width: 80%; }
+.med { width: 60%; }
+.short { width: 40%; }
+
+.hero-scroll-indicator {
+    position: relative;
+    margin-top: 40px;
+}
+
+.mouse {
+    width: 24px;
+    height: 40px;
+    border: 1.5px solid var(--text-dim);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.wheel {
+    width: 2px;
+    height: 6px;
+    background: var(--text-dim);
+    margin-top: 6px;
+    border-radius: 2px;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 140px 0 60px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .visual-card {
+        height: 300px;
+    }
+}

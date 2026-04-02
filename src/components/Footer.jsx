@@ -10,9 +10,9 @@ const Footer = () => {
 
                     {/* BRAND */}
                     <div className="footer-brand">
-                        <Link to="/" className="footer-logo">TechFarm</Link>
+                        <Link to="/" className="footer-logo">Flowgenix</Link>
                         <p className="footer-description">
-                            Cultivating innovation and growing intelligent digital products for businesses worldwide.
+                            Engineering the next generation of intelligent digital ecosystems. Empowering businesses with AI-first solutions.
                         </p>
                         <div className="footer-socials">
                             <a href="#" aria-label="LinkedIn">
@@ -51,7 +51,7 @@ const Footer = () => {
 
                 {/* BOTTOM BAR */}
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} TechFarm Solutions. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Flowgenix AI. All rights reserved.</p>
                 </div>
             </div>
         </footer>

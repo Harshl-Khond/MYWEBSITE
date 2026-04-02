@@ -14,10 +14,10 @@ function Navbar() {
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="logo-section">
-        <Link to="/" className="logo" onClick={closeMenu} aria-label="TechFarm Home">
-          TechFarm
+        <Link to="/" className="logo" onClick={closeMenu} aria-label="Flowgenix Home">
+          Flowgenix
         </Link>
-        <span className="tagline">From Idea to Intelligent Product</span>
+        <span className="tagline">Engineering Intelligent Systems</span>
       </div>
 
       {/* HAMBURGER */}

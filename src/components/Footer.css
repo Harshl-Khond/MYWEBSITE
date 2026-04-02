@@ -1,7 +1,7 @@
 /* FOOTER STYLES */
 
 .footer {
-    background: rgba(15, 23, 42, 0.95);
+    background: #000000;
     border-top: 1px solid var(--glass-border);
     padding: 80px 40px 40px;
     color: var(--text-dim);

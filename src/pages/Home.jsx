@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Hero from '../components/Hero';
+import Features from '../components/Features';
 import './Home.css';
 
 const Home = () => {
@@ -34,122 +37,96 @@ const Home = () => {
 
     return (
         <div className="home-page">
-
-            {/* ===== HERO ===== */}
-            <section className="home-hero">
-                <div className="hero-bg-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1920&q=80"
-                        alt="AI Background"
-                    />
-                </div>
-                <div className="hero-bg-gradient"></div>
-
-                <div className="hero-content reveal-on-scroll fade-in">
-                    <span className="hero-tag">🚀 BUILD SMARTER. SCALE FASTER.</span>
-                    <h1 className="hero-title">
-                        TechFarm<br />
-                        <span className="hero-title-accent">Solutions</span>
-                    </h1>
-                    <p className="hero-tagline">CULTIVATING THE FUTURE</p>
-                    <p className="hero-desc">
-                        We engineer state-of-the-art digital ecosystems — from high-performance web platforms to AI-driven 
-                        automation. Turn your most ambitious ideas into intelligent, market-ready products.
-                    </p>
-                    <div className="hero-cta">
-                        <Link to="/contact" className="btn-primary">Get Started</Link>
-                        <Link to="/about" className="btn-outline">Learn More →</Link>
-                    </div>
-                </div>
-
-                <div className="hero-scroll-hint">
-                    <span></span>
-                </div>
-            </section>
+            <Hero />
 
             {/* ===== TRUSTED BY ===== */}
-            <section className="home-trusted reveal-on-scroll fade-in">
+            <section className="home-trusted">
                 <div className="home-container">
-                    <p className="trusted-label">TRUSTED BY LEADING ORGANIZATIONS</p>
-                    <div className="trusted-logos">
+                    <motion.p 
+                        className="trusted-label"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        TRUSTED BY LEADING ORGANIZATIONS
+                    </motion.p>
+                    <motion.div 
+                        className="trusted-logos"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
                         <span>StartupIndia</span>
                         <span>HealthTech Co.</span>
                         <span>EduNexus</span>
                         <span>FinBridge</span>
                         <span>CloudNine</span>
+                    </motion.div>
+                </div>
+            </section>
+
+            <Features />
+
+            {/* ===== PROCESS SECTION ===== */}
+            <section className="home-process">
+                <div className="home-container">
+                    <motion.div 
+                        className="section-header"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="section-badge">OUR WORKFLOW</span>
+                        <h2 className="section-title">How We Build Excellence</h2>
+                    </motion.div>
+
+                    <div className="process-grid">
+                        {[
+                            { step: "01", title: "Discovery", desc: "We dive deep into your project goals and technical requirements." },
+                            { step: "02", title: "Strategy", desc: "Architecting a scalable roadmap for AI integration and data flow." },
+                            { step: "03", title: "Execution", desc: "Agile development sprints with continuous testing and feedback." },
+                            { step: "04", title: "Scale", desc: "Deployment and optimization for high-availability production." }
+                        ].map((item, idx) => (
+                            <motion.div 
+                                key={idx}
+                                className="process-item"
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.15 }}
+                            >
+                                <span className="process-num text-gradient">{item.step}</span>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* ===== STATS ===== */}
-            <section className="home-stats reveal-on-scroll slide-up">
+            <section className="home-stats">
                 <div className="home-container">
                     <div className="stats-grid">
-                        <div className="stat-item">
-                            <span className="stat-value">50+</span>
-                            <span className="stat-name">Projects Delivered</span>
-                        </div>
-                        <div className="stat-item">
-                            <span className="stat-value">30k+</span>
-                            <span className="stat-name">Lines of Code</span>
-                        </div>
-                        <div className="stat-item">
-                            <span className="stat-value">95%</span>
-                            <span className="stat-name">Client Satisfaction</span>
-                        </div>
-                        <div className="stat-item">
-                            <span className="stat-value">24/7</span>
-                            <span className="stat-name">Expert Support</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ===== SERVICES ===== */}
-            <section className="home-services reveal-on-scroll">
-                <div className="home-container">
-                    <div className="section-header reveal-on-scroll slide-up">
-                        <span className="section-badge">WHAT WE DO</span>
-                        <h2 className="section-title">Our Core Expertise</h2>
-                        <p className="section-subtitle">We combine deep engineering with creative design to deliver digital products that make an impact.</p>
-                    </div>
-
-                    <div className="services-grid">
-                        <div className="svc-home-card reveal-on-scroll slide-up" style={{ transitionDelay: '0.1s' }}>
-                            <div className="svc-home-icon">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721267.png" alt="Web" />
-                            </div>
-                            <h3>Web Development</h3>
-                            <p>High-performance React &amp; Next.js applications built for speed, SEO, and conversion.</p>
-                            <Link to="/services" className="svc-home-link">Learn More →</Link>
-                        </div>
-
-                        <div className="svc-home-card reveal-on-scroll slide-up" style={{ transitionDelay: '0.2s' }}>
-                            <div className="svc-home-icon">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2586/2586488.png" alt="Mobile" />
-                            </div>
-                            <h3>Mobile Apps</h3>
-                            <p>Cross-platform Flutter &amp; React Native apps with native-quality performance and UX.</p>
-                            <Link to="/services" className="svc-home-link">Learn More →</Link>
-                        </div>
-
-                        <div className="svc-home-card reveal-on-scroll slide-up" style={{ transitionDelay: '0.3s' }}>
-                            <div className="svc-home-icon">
-                                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="AI" />
-                            </div>
-                            <h3>AI &amp; Automation</h3>
-                            <p>LLM-powered chatbots, RAG systems, and predictive analytics that transform your data.</p>
-                            <Link to="/services" className="svc-home-link">Learn More →</Link>
-                        </div>
-
-                        <div className="svc-home-card reveal-on-scroll slide-up" style={{ transitionDelay: '0.4s' }}>
-                            <div className="svc-home-icon">
-                                <img src="https://cdn-icons-png.flaticon.com/512/4215/4215831.png" alt="Cloud" />
-                            </div>
-                            <h3>Cloud &amp; DevOps</h3>
-                            <p>Auto-scaling infrastructure on AWS, GCP &amp; Azure with CI/CD and 99.9% uptime.</p>
-                            <Link to="/services" className="svc-home-link">Learn More →</Link>
-                        </div>
+                        {[
+                            { label: "Projects Delivered", value: "50+" },
+                            { label: "Lines of Code", value: "30k+" },
+                            { label: "Satisfaction", value: "95%" },
+                            { label: "Expert Support", value: "24/7" }
+                        ].map((stat, idx) => (
+                            <motion.div 
+                                key={idx}
+                                className="stat-item"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                            >
+                                <span className="stat-value text-gradient">{stat.value}</span>
+                                <span className="stat-name">{stat.label}</span>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -199,7 +176,7 @@ const Home = () => {
             <section className="home-why reveal-on-scroll">
                 <div className="home-container">
                     <div className="section-header reveal-on-scroll slide-up">
-                        <span className="section-badge">WHY TECHFARM</span>
+                        <span className="section-badge">WHY FLOWGENIX</span>
                         <h2 className="section-title">What Sets Us Apart</h2>
                     </div>
                     <div className="why-grid">

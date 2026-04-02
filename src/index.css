@@ -1,16 +1,19 @@
 :root {
-    /* Millennial Sober Palette - Sophisticated & Professional */
-    --bg-dark: #0f172a;        /* Deep Slate Navy */
-    --bg-card: rgba(30, 41, 59, 0.7);
-    --primary: #3b82f6;       /* Professional Royal Blue */
-    --primary-glow: rgba(59, 130, 246, 0.2);
-    --secondary: #64748b;     /* Refined Slate Gray */
-    --secondary-glow: rgba(100, 116, 139, 0.2);
-    --accent: #10b981;        /* Muted Emerald Teal */
-    --text-main: #f8fafc;
-    --text-dim: #94a3b8;
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    /* Flowgenix AI Palette - Premium Dark Mode */
+    --bg-dark: #000000;        /* True Black */
+    --bg-deep: #000002;        /* Near Black */
+    --bg-card: rgba(10, 10, 15, 0.7);
+    --primary: #1640B7;       /* Vibrant Tech Blue */
+    --primary-glow: rgba(22, 64, 183, 0.3);
+    --secondary: #3688C9;     /* Technical Blue */
+    --secondary-glow: rgba(54, 136, 201, 0.2);
+    --accent: #091359;        /* Deep Navy Accent */
+    --text-main: #F4F4F5;     /* Off-White */
+    --text-dim: #9D9EA4;      /* Muted Gray */
+    --text-muted: #5E5E61;    /* Dark Muted Gray */
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-glow: rgba(22, 64, 183, 0.1);
 }
 
 @import "tailwindcss";
@@ -30,13 +33,31 @@ html {
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        url("https://www.transparenttextures.com/patterns/carbon-fibre.png"); /* Subtle noise/grain substitute */
+    background-size: 40px 40px, 40px 40px, 200px 200px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 /* CUSTOM SCROLLBAR */
